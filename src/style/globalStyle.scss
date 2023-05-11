@@ -1,0 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+$button-color: hsl(0, 0%, 17%);
+$title-color: hsl(0, 0%, 59%);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
