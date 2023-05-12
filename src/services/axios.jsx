@@ -1,10 +1,7 @@
 import axios from "axios";
-// import dotenv from "dotenv";
 
-// dotenv.config();
-
-// const apiKey = process.env.API_KEY;
-
-export default axios.create({
-  baseURL: `https://geo.ipify.org/api/v2/country?apiKey=`,
-});
+export const createAPIInstance = (userIP) => {
+  return axios.create({
+    baseURL: `https://geo.ipify.org/api/v2/country,city?apiKey=at_KoQaGSIEszHcgEqt8LwhMimejmC1V&ipAddress=${userIP}`,
+  });
+};

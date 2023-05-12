@@ -31,4 +31,34 @@ main {
     border-bottom-right-radius: 10px;
     cursor: pointer;
   }
+
+  .toastify {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: #000;
+
+    &.toastify-error {
+      background-color: blue;
+    }
+
+    &.toastify-warning {
+      background-color: #ffb200;
+    }
+
+    &.toastify-success {
+      background-color: #32a852;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  main input {
+    width: 40%;
+  }
+  main button {
+    width: 4%;
+  }
 }
