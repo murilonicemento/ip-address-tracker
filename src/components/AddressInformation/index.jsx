@@ -24,8 +24,6 @@ export function AddressInformation({ data }) {
         <div>
           <h6>LOCATION</h6>
           <p>Localização</p>
-          <h6>TIMEZONE</h6>
-          <p>Timezone</p>
         </div>
       )}
       {data.location?.timezone ? (

@@ -33,25 +33,10 @@ main {
     cursor: pointer;
   }
 
-  .toastify {
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-    border-radius: 4px;
-    padding: 15px;
-    background-color: #000;
-
-    &.toastify-error {
-      background-color: blue;
-    }
-
-    &.toastify-warning {
-      background-color: #ffb200;
-    }
-
-    &.toastify-success {
-      background-color: #32a852;
-    }
+  .toastify-error {
+    background: none;
+    height: 50px;
+    position: absolute;
   }
 }
 

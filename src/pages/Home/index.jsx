@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { AddressInformation } from "../../components/AddressInformation";
+import { Header } from "../../components/Header";
+import { Map } from "../../components/Map";
 import { ToastContainer, toast } from "react-toastify";
 import { createAPIInstance } from "../../services/axios";
-import { Header } from "../../components/Header";
 import arrow from "../../assets/images/icon-arrow.svg";
 import "react-toastify/dist/ReactToastify.css";
 import "./style.scss";
@@ -10,11 +11,14 @@ import "./style.scss";
 export function Home() {
   const [data, setData] = useState({});
   const [userIP, setUserIP] = useState("");
+  // toast.error("Opa meu nobre testando a merda que tu fez", {
+  //   className: "toastify-error",
+  // });
   return (
     <>
       <Header />
       <main>
-        {/* <ToastContainer /> */}
+        <ToastContainer />
         <div>
           <input
             type="text"
@@ -31,11 +35,7 @@ export function Home() {
                 instance
                   .get()
                   .then((response) => setData(response.data))
-                  .catch(() =>
-                    toast.error("IP incorreto", {
-                      className: "toastify-error",
-                    })
-                  );
+                  .catch((error) => toast.error(error));
               }
             }}
           >
@@ -43,6 +43,7 @@ export function Home() {
           </button>
         </div>
         <AddressInformation userIP={userIP} data={data} />
+        <Map data={data} />
       </main>
     </>
   );
