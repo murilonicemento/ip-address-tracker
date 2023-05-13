@@ -7,12 +7,7 @@ export function Map({ data }) {
   return (
     <div id="map">
       {data?.location ? (
-        <MapContainer
-          center={[data.location.lat, data.location.lng]}
-          zoom={13}
-          scrollWheelZoom={false}
-          attributionControl={false}
-        >
+        <MapContainer center={[data.location.lat, data.location.lng]} zoom={13}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <Marker position={[data.location.lat, data.location.lng]}>
             <Popup>
@@ -21,12 +16,7 @@ export function Map({ data }) {
           </Marker>
         </MapContainer>
       ) : (
-        <MapContainer
-          center={[34.04915, -118.09462]}
-          zoom={13}
-          scrollWheelZoom={false}
-          attributionControl={false}
-        >
+        <MapContainer center={[34.04915, -118.09462]} zoom={13}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <Marker position={[34.04915, -118.09462]}>
             <Popup>
