@@ -43,8 +43,8 @@ export function Home() {
           </button>
         </div>
         <AddressInformation userIP={userIP} data={data} />
-        <Map data={data} />
       </main>
+      <Map data={data} />
     </>
   );
 }

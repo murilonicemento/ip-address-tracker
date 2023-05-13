@@ -12,7 +12,7 @@ export function AddressInformation({ data }) {
       ) : (
         <div>
           <h6>IP ADDRESS</h6>
-          <p>IP address</p>
+          <p>192.212.174.101</p>
         </div>
       )}
       {data.location?.region ? (
@@ -23,7 +23,7 @@ export function AddressInformation({ data }) {
       ) : (
         <div>
           <h6>LOCATION</h6>
-          <p>Localização</p>
+          <p>Brooklyn, NY 10001</p>
         </div>
       )}
       {data.location?.timezone ? (
@@ -34,7 +34,7 @@ export function AddressInformation({ data }) {
       ) : (
         <div>
           <h6>TIMEZONE</h6>
-          <p>Timezone</p>
+          <p>UTC -05:00</p>
         </div>
       )}
       {data?.isp ? (
@@ -45,7 +45,7 @@ export function AddressInformation({ data }) {
       ) : (
         <div>
           <h6>ISP</h6>
-          <p>ISP</p>
+          <p>SpaceX Starlink</p>
         </div>
       )}
     </section>

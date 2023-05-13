@@ -1,5 +1,9 @@
-#map {
+div#map {
+  background: none;
   position: relative;
   z-index: -1;
-  margin-top: -59px;
+}
+
+.leaflet-container {
+  height: 100vh;
 }
