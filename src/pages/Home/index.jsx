@@ -11,9 +11,19 @@ import "./style.scss";
 export function Home() {
   const [data, setData] = useState({});
   const [userIP, setUserIP] = useState("");
-  // toast.error("Opa meu nobre testando a merda que tu fez", {
-  //   className: "toastify-error",
-  // });
+
+  const handleSearch = async () => {
+    if (userIP) {
+      const instance = createAPIInstance(userIP);
+      try {
+        const response = await instance.get();
+        setData(response.data);
+      } catch (error) {
+        toast.error("IP inválido");
+      }
+    }
+  };
+
   return (
     <>
       <Header />
@@ -28,17 +38,7 @@ export function Home() {
             value={userIP}
             onChange={(event) => setUserIP(event.target.value)}
           />
-          <button
-            onClick={() => {
-              if (userIP) {
-                const instance = createAPIInstance(userIP);
-                instance
-                  .get()
-                  .then((response) => setData(response.data))
-                  .catch((error) => toast.error(error));
-              }
-            }}
-          >
+          <button onClick={handleSearch}>
             <img src={arrow} alt="Arrow Icon" />
           </button>
         </div>
