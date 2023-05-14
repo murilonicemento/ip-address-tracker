@@ -64,6 +64,10 @@ git push origin minha-contribuicao
 
 6. Abra um pull request no repositório original.
 
+## Design
+
+<img src="./design/desktop-preview.jpg">
+
 ## Licença
 
 Este projeto é licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
